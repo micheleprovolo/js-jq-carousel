@@ -6,6 +6,15 @@ $( document ).ready(function() {
     //al clic sulla classe prev si attiva la funzione precedenteslide
     $(".prev").click(precedenteslide);
 
+    //per comandare da tastiera il prev e next
+    $("body").keydown(function( event ) {
+    if (event.keyCode == 37) { //left arrow clicked
+        $(".prev").click();
+    } else if (event.keyCode == 39) { //right arrow clicked
+        $(".next").click();
+    }
+});
+
     // funzione prossimaslide
     function prossimaslide(){
 
